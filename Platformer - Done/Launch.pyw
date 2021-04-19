@@ -39,7 +39,7 @@ class Game(object):
         """Load High Score"""
         self.dir = path.dirname(__file__)
         img_dir = path.join(self.dir, "Images")
-        with open(path.join(self.dir, HS_FILE), 'w') as f:
+        with open(path.join(self.dir, HS_FILE), 'r') as f:
             try:  # Tries to read the file
                 self.highscore = int(f.read())  # Reads the file
             except:  # Condition if there is nothing in the file
@@ -47,6 +47,11 @@ class Game(object):
 
         # Loads sprite sheet image
         self.spritesheet = Spritesheet(path.join(img_dir, SPRITE_FILE))
+
+        # CLoud Images
+        self.cloud_images = []
+        for i in range(1, 4):
+            self.cloud_images.append(pg.image.load(path.join(CLOUD_PATH, 'cloud{}.png'.format(i))).convert())
 
         # Load sound files
         self.snd_dir = path.join(self.dir, "Sounds")
@@ -59,7 +64,7 @@ class Game(object):
         self.Player_Group = pg.sprite.Group()
         self.Platforms_Group = pg.sprite.Group()
         self.Mob_Group = pg.sprite.Group()
-
+        self.Cloud_Group = pg.sprite.Group()
         # Create Game Objects
         self.player = Player(self)
         self.Player_Group.add(self.player)
@@ -81,6 +86,12 @@ class Game(object):
             self.all_sprites.add(i)
         for i in self.Mob_Group:
             self.all_sprites.add(i)
+        for i in self.Cloud_Group:
+            self.all_sprites.add(i)
+
+        for i in range(8):
+            c = Cloud(self)
+            c.rect.y += 500
 
         pg.mixer.music.load(path.join(self.snd_dir, "Happy Tune.ogg"))
 
@@ -123,7 +134,7 @@ class Game(object):
 
         # Spawn a Mob
         now = pg.time.get_ticks()
-        if now - self.mob_timer > 5000 + random.choice([-1000, -500, 0, 500, 1000]):
+        if now - self.mob_timer > 3000 + random.choice([-1000, -500, 0, 500, 1000]):
             self.mob_timer = now
             Mob(self)
 
@@ -147,7 +158,11 @@ class Game(object):
 
         # if player reached top 1/4 of the screen
         if self.player.rect.top <= HEIGHT / 4:
+            if random.randrange(100) < 13:
+                Cloud(self)
             self.player.pos.y += max(abs(self.player.vel.y), 2)
+            for cloud in self.Cloud_Group:
+                cloud.rect.y += max(abs(self.player.vel.y / 2), 2)
             for mob in self.Mob_Group:
                 mob.rect.y += max(abs(self.player.vel.y), 2)
             for plat in self.Platforms_Group:
@@ -210,6 +225,7 @@ class Game(object):
         if self.score > self.highscore:  # If new High Score
             self.highscore = self.score
             self.draw_text("New HighScore: " + str(self.score), 22, WHITE, WIDTH / 2, HEIGHT / 2 + 40)
+            print(self.score)
 
             # Opens the file to rewrite high score
             with open(path.join(self.dir, HS_FILE), 'w') as f:

@@ -8,7 +8,7 @@
 # Imports:
 import pygame as pg
 import os
-form os import path
+from os import path
 import random
 ######################################
 
