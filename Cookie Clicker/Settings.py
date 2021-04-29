@@ -8,16 +8,25 @@ import random
 
 # Directories:
 Game_folder = os.path.dirname(__file__)
+
 Image_folder = os.path.join(Game_folder, "Images")
+Upgrades_folder = os.path.join(Image_folder, "Upgrades")
+Background_Main_folder = os.path.join(Image_folder, "Background and Main Cookie")
+
 Sounds_folder = os.path.join(Game_folder, "Sounds")
 ######################################
 
+# Images
+Mouse_Image = os.path.join(Upgrades_folder, "Mouse.png")
+
+######################################
+
 # Title:
-TITLE = "TEMPLATE"
+TITLE = "COOKIE CLICKER"
 
 # Dimensions:
 HEIGHT = 700
-WIDTH = 500
+WIDTH = 900
 FPS = 60
 
 # Colors:

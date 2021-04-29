@@ -1,4 +1,4 @@
-# Pygame Template -- Skeleton for a new pygame project -- Launch File AKA main.py
+# Cookie Clicker -- Launch File AKA main.py
 ######################################
 
 # Imports:
@@ -15,6 +15,7 @@ class Game(object):
 
     def __init__(self):
         self.running = True
+        self.playing = True
 
         # Initialize Pygame and Create Window
         pg.init()
@@ -27,19 +28,33 @@ class Game(object):
         """Start a New Game"""
         # Create Sprite Groups
         self.all_sprites = pg.sprite.Group()
-        self.Player_Group = pg.sprite.Group()
-        self.Enemy_Group = pg.sprite.Group()
+        self.Cookie_Group = pg.sprite.Group()
+        self.Mouse_Group = pg.sprite.Group()
+        self.Grandma_Group = pg.sprite.Group()
+        self.Temple_Group = pg.sprite.Group()
+        self.Cookie_World_Group = pg.sprite.Group()
 
         # Create Game Objects
-        self.player = Player()
+        self.main_cookie = Cookie()
+        self.Cookie_Group.add(self.main_cookie)
 
         # Add Game Objects to Groups
-        self.all_sprites.add(self.player)
+        for i in self.Cookie_Group:
+            self.all_sprites.add(i)
+        for i in self.Mouse_Group:
+            self.all_sprites.add(i)
+        for i in self.Grandma_Group:
+            self.all_sprites.add(i)
+        for i in self.Temple_Group:
+            self.all_sprites.add(i)
+        for i in self.Cookie_World_Group:
+            self.all_sprites.add(i)
+
+        # Run it
         self.run()
 
     def run(self):
         """Main Game Loop"""
-        self.playing = True
         while self.playing:
             self.clock.tick(FPS)
             self.events()
@@ -51,7 +66,13 @@ class Game(object):
         for event in pg.event.get():
             # Check for Closing the Window
             if event.type == pg.QUIT:
-                self.runnning = False
+                self.playing = False
+                self.running = False
+
+            if event.type == pg.MOUSEBUTTONUP:
+                pos = pygame.mouse.get_pos()
+
+                clicked_sprites = [s for s in sprites if s.rect.collidepoint(pos)]
 
     def update(self):
         """ Game Loop - Update"""
