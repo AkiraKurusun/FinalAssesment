@@ -1,0 +1,6 @@
+Ethan Frailey
+5/2021
+This is an auto clicker program. 
+I am not resposible for any lost data or damaged personal property from use of this program.
+To run the program click on the Gui.pyw file.
+ 
