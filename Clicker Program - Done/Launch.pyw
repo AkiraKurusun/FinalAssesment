@@ -12,7 +12,7 @@ from pynput.keyboard import Listener, KeyCode
 
 # Variables
 value = int(sys.argv[1])
-delay = (60 / value) / 100
+delay = (60/value) / 100
 button = Button.left
 start_stop_key = KeyCode(char='m')
 stop_key = KeyCode(char='b')

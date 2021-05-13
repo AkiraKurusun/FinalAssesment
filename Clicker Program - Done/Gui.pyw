@@ -22,6 +22,7 @@ class App(Frame):
         self.pack()
         self.create_widgets()
 
+    ######################################
     def create_widgets(self):
         self.title = Label(text="Auto Clicker Program")
         self.title.pack()
@@ -42,6 +43,7 @@ class App(Frame):
         self.start = Button(text="Start", command=self.start, width=200)
         self.start.pack(side="left", padx=5, pady=5, fill="x")
 
+    ######################################
     def start(self):
         self.value = self.slider.get()
         self.master.attributes('-disabled', True)
@@ -52,12 +54,12 @@ class App(Frame):
 def launch():
     root = Tk()
     root.title("AutoClicker")
-    photo = PhotoImage(file = "Clicker_Image.png")
+    photo = PhotoImage(file="Clicker_Image.png")
     root.iconphoto(False, photo)
     root.geometry(str(str(WIDTH) + "x" + str(HEIGHT)))
     root.resizable(False, False)
     root.attributes("-fullscreen", FULLSCREEN)
     app = App(root)
     root.mainloop()
-
+######################################
 launch()

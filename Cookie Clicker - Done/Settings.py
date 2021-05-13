@@ -24,9 +24,12 @@ Mouse_Image = os.path.join(Upgrades_folder, "Mouse.png")
 # Title:
 TITLE = "COOKIE CLICKER"
 
+# Font Setting:
+font_name = pg.font.match_font('arial')
+
 # Dimensions:
-HEIGHT = 700
-WIDTH = 900
+HEIGHT = 500
+WIDTH = 500
 FPS = 60
 
 # Colors:
