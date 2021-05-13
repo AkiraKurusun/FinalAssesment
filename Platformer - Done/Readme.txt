@@ -1,5 +1,5 @@
-This program was made by ETHAN FRAILEY
-Any deletion or misuse of this program is prohibited
+ETHAN FRAILEY
+Year: 2021
 
 Art and Music are not Mine
 
@@ -8,7 +8,9 @@ Happy Tune by http://opengameart.org/users/syncopika
 Yippee Song by http://opengameart.org/users/snabisch
 
 ###################################################
+ETHAN FRAILEY
+Year: 2021
 
-To lanuch this program double click on Launch.pyw
+Discription: This is a platformer game where your goal is to get to the highest point. This program was made by following a tutorial. This game has a high score funtion that will tell you the high score and you score. you increase score by going higher. HighScores are located in the highscore.txt file
 
-P.S (Try and beat my highscore :)  )
+How to run: Double Click on the Launch.pyw file

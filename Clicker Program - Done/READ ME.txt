@@ -1,6 +1,6 @@
-Ethan Frailey
-5/2021
-This is an auto clicker program. 
-I am not resposible for any lost data or damaged personal property from use of this program.
-To run the program click on the Gui.pyw file.
- 
+ETHAN FRAILEY
+Year: 2021
+
+Discription: This is an auto clicker program. You have the choice of clicking 100 to 1000 times per second. This program uses hotkeys in order to work. When you first hit the start button M is used to start clicking and M is used again to stop clicking. If you wish to change you clicking speed hit the key B and you will be able to change you speed of clicks. BE WARNED This program is very likely to crash it is advised that you close no programs without pressing B before doing so. It is also advised that you make sure that clicking is stop before you take your mouse off of the spot you want to click.
+
+How to run: Double Click on the Gui.pyw file

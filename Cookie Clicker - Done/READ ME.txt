@@ -1,0 +1,6 @@
+ETHAN FRAILEY
+Year: 2021
+
+Discription: This Game is a clicker game. You click the cookie to get points that can lead to purchasing upgrades. The more upgrades you buy the more cookies you get per click increases. The more you buy of a specfic upgrade the price of that upgrade will increase.
+
+How to run: Double click on the Launch.pyw file

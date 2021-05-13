@@ -1,4 +1,6 @@
-Ethan Frailey
-5/2021
+ETHAN FRAILEY
+YEAR: 2021
 
-To run this program double click the Lauch.pyw file
+Discription: This program was followed by a totrial. I made the same program but sorted the code into differnet files for easy organisation. Side arrow keys are used to move the block around. Up arrow key is used to rotate the block. The down arrow key is to fast drop. Space Bar is used to imeditally drop.
+
+How to run: To run this program double click the Lauch.pyw file

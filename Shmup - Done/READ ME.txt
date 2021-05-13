@@ -1,4 +1,9 @@
-Ethan Frailey
-5/2021
+ETHAN FRAILEY
+YEAR: 2021
 
-To run this proram run the Launch.pyw file
+Artwork: Unknown Artist - Images found at https://opengameart.org/
+Sounds: Unknown Artist - Sounds found at https://opengameart.org/
+
+Discription: Classic Shmup game. Your goal is to get the highest score by shooting ships. You can get powerups that increase number of bullets per shot or the speed at which you shoot.
+
+How to run: Double click the Launch.pyw file
