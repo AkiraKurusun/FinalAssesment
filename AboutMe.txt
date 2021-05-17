@@ -1,0 +1,21 @@
+# Ethan Frailey
+# 5/2021
+
+Contact Info:
+- Main Email: akira.kursun@gmail.com
+
+Discription:
+- I started seriously coding in 2019 when one of my teacher gave me a gift of a MicroBit. I had previously did multiple Hour of Code sponsored by my schools but i dont count these. My coding experience really took off when i took a clas my jounior year of high school on Python. I learned all the basics and some more complex libraries in python such as tkinter and pygame. In the future I plan on coding as a hobbie and learing Swift Code.
+
+Skills I Know:
+- Intermediate Pygame
+- Intermediate Tkinter
+- Complex Class making
+- Complex funtions
+- Reading and writing to files
+- Installing libraies
+- Keeping an organized file system
+- giving credit in code
+- Object Orintated Programming
+- Using Hotkeys on the keyboard
+- Basic Math Funtions
